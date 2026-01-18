@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Information</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<!-- TOP BLUE BAR -->
+<div class="top-bar">
+  Please Enter Your Email and Mobile Number.
+  <span>Unlock 300TB+ Premium Digital Gold All Mega Bundle – for Just ₹49</span>
+</div>
+
+<!-- FORM BOX -->
+<div class="form-wrapper">
+
+  <!-- STEPS -->
+  <div class="steps">
+    <div class="step active">1 CONTACT<br><small>Information</small></div>
+    <div class="step">2 PAYMENT<br><small>Your Order</small></div>
+  </div>
+
+  <h3>Please Enter Your Email and Mobile Number correctly</h3>
+
+  <!-- GOOGLE FORM POST -->
+  <form
+    id="contactForm"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSd3hGcf1kGpMUERMqWL37M9HQ/formResponse"
+    method="POST"
+    target="hidden_iframe"
+  >
+    <input type="text" name="entry.1554706483" placeholder="First name" required>
+    <input type="text" name="entry.2054227987" placeholder="Last name" required>
+    <input type="email" name="entry.1366696789" placeholder="Email" required>
+    <input type="tel" name="entry.981002609" placeholder="Phone number" required>
+
+    <button type="submit" class="next-btn">
+      NEXT STEP
+      <span>YES! I Want This Offer NOW!!</span>
+    </button>
+
+    <p class="secure">🔒 100% Secure and Safe Payments</p>
+  </form>
+
+  <!-- Hidden iframe (prevents redirect to Google) -->
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+</div>
+
+<script src="register.js"></script>
+</body>
+</html>
