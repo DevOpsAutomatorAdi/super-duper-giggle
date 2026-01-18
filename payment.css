@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+/* Top bar */
+.top-bar {
+  background: #060b4a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.top-bar span {
+  color: yellow;
+}
+
+/* Wrapper */
+.payment-wrapper {
+  background: #fff;
+  width: 420px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 4px;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step {
+  font-size: 13px;
+  color: #999;
+}
+
+.step.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid red;
+}
+
+.step.done {
+  color: #000;
+}
+
+/* Order */
+.order-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* Payment method */
+.payment-method {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+/* Pay button */
+.pay-btn {
+  width: 100%;
+  background: #d81616;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pay-btn small {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.secure {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
