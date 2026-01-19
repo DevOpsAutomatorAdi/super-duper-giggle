@@ -3,61 +3,71 @@
   font-family: Arial, sans-serif;
 }
 
+/* BASE */
 body {
   margin: 0;
   background: #000;
+  padding: 0 12px; /* prevents mobile edge clipping */
 }
 
-/* Top bar */
+/* ================= TOP BAR ================= */
 .top-bar {
   background: #060b4a;
   color: white;
   text-align: center;
-  padding: 20px;
-  font-size: 22px;
+  padding: 14px 10px;
+  font-size: 14px;
   font-weight: bold;
+  line-height: 1.4;
 }
 
 .top-bar span {
+  display: block;
   color: yellow;
+  font-size: 13px;
+  margin-top: 4px;
 }
 
-/* Wrapper */
+/* ================= WRAPPER ================= */
 .payment-wrapper {
   background: #fff;
-  width: 420px;
-  margin: 40px auto;
-  padding: 25px;
-  border-radius: 4px;
+  width: 100%;
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 18px;
+  border-radius: 6px;
 }
 
-/* Steps */
+/* ================= STEPS ================= */
 .steps {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .step {
-  font-size: 13px;
+  font-size: 12px;
   color: #999;
+  text-align: center;
 }
 
 .step.active {
   color: #000;
   font-weight: bold;
   border-bottom: 3px solid red;
+  padding-bottom: 4px;
 }
 
 .step.done {
   color: #000;
 }
 
-/* Order */
+/* ================= ORDER BOX ================= */
 .order-box {
   border: 1px solid #ddd;
-  padding: 15px;
-  margin: 15px 0;
+  padding: 12px;
+  margin: 12px 0;
+  font-size: 14px;
 }
 
 .order-row {
@@ -66,32 +76,88 @@ body {
   font-weight: bold;
 }
 
-/* Payment method */
+/* ================= PAYMENT METHOD ================= */
 .payment-method {
   border: 1px solid #ddd;
   padding: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+  font-size: 14px;
 }
 
-/* Pay button */
+/* ================= PAY BUTTON ================= */
 .pay-btn {
   width: 100%;
   background: #d81616;
   color: #fff;
   border: none;
-  padding: 15px;
-  font-size: 16px;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: bold;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .pay-btn small {
   display: block;
   font-size: 12px;
   margin-top: 4px;
+  font-weight: normal;
 }
 
+/* ================= SECURE TEXT ================= */
 .secure {
   text-align: center;
   font-size: 12px;
   margin-top: 10px;
+}
+
+/* =================================================
+   📱 TABLET (768px and up)
+================================================= */
+@media (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .top-bar {
+    font-size: 18px;
+    padding: 18px;
+  }
+
+  .top-bar span {
+    font-size: 15px;
+  }
+
+  .payment-wrapper {
+    max-width: 480px;
+    padding: 22px;
+    margin-top: 40px;
+  }
+
+  .step {
+    font-size: 13px;
+  }
+
+  .pay-btn {
+    font-size: 16px;
+  }
+}
+
+/* =================================================
+   💻 DESKTOP (1024px and up)
+================================================= */
+@media (min-width: 1024px) {
+  .payment-wrapper {
+    max-width: 520px;
+    padding: 25px;
+  }
+
+  .top-bar {
+    font-size: 22px;
+  }
+
+  .order-box,
+  .payment-method {
+    font-size: 15px;
+  }
 }
