@@ -1,5 +1,5 @@
 function payNow() {
-  const upiId = "aaditya.sirsam@okaxis";
+  const upiId = "7821847477";
   const amount = "1";
   const name = "All In One Bundle";
   const txnNote = "Lifetime Access";
