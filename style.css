@@ -5,18 +5,21 @@
   font-family: Arial, sans-serif;
 }
 
+/* BASE */
 body {
   background: #000;
   color: #fff;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
+/* ================= HERO ================= */
 .hero {
-  padding: 60px 20px;
+  padding: 40px 16px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   line-height: 1.4;
 }
 
@@ -25,62 +28,72 @@ body {
 }
 
 .subtext {
-  margin-top: 15px;
+  margin-top: 12px;
   opacity: 0.8;
+  font-size: 0.95rem;
 }
 
+/* ================= FEATURES ================= */
 .features {
   list-style: none;
-  margin: 25px 0;
+  margin: 22px 0;
+  padding: 0;
 }
 
 .features li {
   margin: 8px 0;
+  font-size: 0.95rem;
 }
 
+/* ================= COUNTDOWN ================= */
 .countdown {
-  font-size: 1.6rem;
-  margin: 20px 0;
+  font-size: 1.4rem;
+  margin: 18px 0;
   color: red;
 }
 
+/* ================= CTA ================= */
 .cta {
   background: red;
   color: #fff;
   border: none;
-  padding: 15px 25px;
+  padding: 14px 22px;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 6px;
 }
 
+/* ================= PRODUCTS (FLOATING) ================= */
 .products {
-  position: fixed;
-  right: 20px;
-  top: 120px;
+  position: static; /* mobile-safe */
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  margin-top: 30px;
 }
 
 .product-card {
   background: #111;
-  padding: 15px;
+  padding: 14px;
   border: 1px solid #333;
-  width: 220px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
   text-align: center;
 }
 
+/* ================= FAQ ================= */
 .faq {
   background: #fff;
   color: #000;
-  padding: 40px 20px;
-  margin-top: 80px;
+  padding: 32px 16px;
+  margin-top: 60px;
 }
 
 .faq h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
 }
 
 .faq h2 span {
@@ -88,39 +101,99 @@ body {
 }
 
 .faq-item {
-  max-width: 800px;
+  max-width: 100%;
   margin: 10px auto;
 }
 
 .faq-question {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   background: #f0f0f0;
   border: none;
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
 }
 
 .faq-answer {
   display: none;
-  padding: 15px;
+  padding: 14px;
   background: #fafafa;
+  font-size: 0.9rem;
 }
 
+/* ================= OFFER BAR ================= */
 .offer-bar {
   position: fixed;
   bottom: 0;
   width: 100%;
   background: #111;
   color: #fff;
-  padding: 15px 20px;
+  padding: 12px 14px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  z-index: 999;
 }
 
 .cta.small {
   padding: 10px 18px;
   font-size: 0.9rem;
+}
+
+/* =================================================
+   📱 TABLET (768px and up)
+================================================= */
+@media (min-width: 768px) {
+  .hero {
+    padding: 60px 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .features li {
+    font-size: 1rem;
+  }
+
+  .products {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    margin: 0;
+  }
+
+  .product-card {
+    width: 220px;
+  }
+
+  .faq-item {
+    max-width: 800px;
+  }
+
+  .offer-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+/* =================================================
+   💻 DESKTOP (1024px and up)
+================================================= */
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .countdown {
+    font-size: 1.6rem;
+  }
+
+  .cta {
+    font-size: 1.05rem;
+  }
 }
