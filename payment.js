@@ -1,6 +1,6 @@
 function payNow() {
-  const upiId = "9112152627@ibl";
-  const amount = "18";
+  const upiId = "9112152627";
+  const amount = "1";
   const name = "All In One Bundle";
   const txnNote = "Lifetime Access";
 
