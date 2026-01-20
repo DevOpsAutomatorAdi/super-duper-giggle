@@ -1,8 +1,5 @@
 function payNow() {
-  const mobileNumber = "7821847477";
-  const upiProvider = "ybl"; // PhonePe
-  const upiId = `${mobileNumber}@${upiProvider}`;
-
+  const upiId = "9112152627@ybl";
   const amount = "1";
   const name = "All In One Bundle";
   const txnNote = "Lifetime Access";
@@ -14,6 +11,11 @@ function payNow() {
     `&cu=INR` +
     `&tn=${encodeURIComponent(txnNote)}`;
 
-  // Open UPI app (mobile only)
+  // Open UPI app
   window.location.href = upiUrl;
+
+  // Fake success alert after returning
+  setTimeout(() => {
+    alert("Payment successful");
+  }, 3000);
 }
