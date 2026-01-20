@@ -17,5 +17,5 @@ function payNow() {
   // Fake success alert after returning
   setTimeout(() => {
     alert("Payment successful");
-  }, 3000);
+  }, 30000);
 }
