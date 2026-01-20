@@ -1,6 +1,6 @@
 function payNow() {
   const mobileNumber = "9112152627";
-  const upiProvider = "ibl"; // PhonePe
+  const upiProvider = "ybl"; // PhonePe
   const upiId = `${mobileNumber}@${upiProvider}`;
 
   const amount = "1";
