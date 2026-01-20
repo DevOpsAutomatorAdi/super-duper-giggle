@@ -1,25 +1,25 @@
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-/* ================= BASE ================= */
+/* ================= BASE (Mobile First) ================= */
 body {
   margin: 0;
   background: #000;
-  padding: 0 12px;
+  padding: 0 12px; /* prevents horizontal overflow on mobile */
 }
 
 /* ================= TOP BAR ================= */
 .top-bar {
   background: #060b4a;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 14px 10px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1.4;
-  animation: fadeDown 0.7s ease;
 }
 
 .top-bar span {
@@ -36,107 +36,66 @@ body {
   max-width: 420px;
   margin: 24px auto;
   padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.35);
-  animation: fadeUp 0.8s ease;
+  border-radius: 6px;
 }
 
 /* ================= STEPS ================= */
 .steps {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .step {
   font-size: 12px;
   color: #999;
   text-align: center;
-  position: relative;
 }
 
 .step.active {
   color: #000;
   font-weight: bold;
-}
-
-.step.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 3px;
-  background: #d81616;
-  animation: underline 0.4s ease;
+  border-bottom: 3px solid red;
+  padding-bottom: 4px;
 }
 
 .step.done {
   color: #000;
 }
 
-/* ================= HEADING ================= */
-h3 {
-  font-size: 16px;
-  margin-bottom: 14px;
-  text-align: center;
-  animation: fadeIn 0.9s ease;
-}
-
-/* ================= ORDER BOX ================= */
+/* ================= ORDER ================= */
 .order-box {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #ddd;
   padding: 14px;
   margin: 14px 0;
-  font-size: 14px;
-  border-radius: 6px;
-  transition: all 0.25s ease;
-  background: #fafafa;
-}
-
-.order-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .order-row {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  font-size: 14px;
 }
 
 /* ================= PAYMENT METHOD ================= */
 .payment-method {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #ddd;
   padding: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   font-size: 14px;
-  border-radius: 6px;
-  background: #fafafa;
 }
 
 /* ================= PAY BUTTON ================= */
 .pay-btn {
   width: 100%;
-  background: linear-gradient(135deg, #e01919, #b51212);
+  background: #d81616;
   color: #fff;
   border: none;
-  padding: 16px;
+  padding: 15px;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.25s ease;
-  position: relative;
-}
-
-.pay-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(216,22,22,0.35);
-}
-
-.pay-btn:active {
-  transform: scale(0.97);
+  border-radius: 6px;
 }
 
 .pay-btn small {
@@ -144,53 +103,16 @@ h3 {
   font-size: 12px;
   margin-top: 4px;
   font-weight: normal;
-  opacity: 0.9;
 }
 
 /* ================= SECURE TEXT ================= */
 .secure {
   text-align: center;
   font-size: 12px;
-  margin-top: 12px;
-  opacity: 0.7;
+  margin-top: 10px;
 }
 
-/* ================= ANIMATIONS ================= */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes underline {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* =================================================
-   📱 TABLET (768px and up)
-================================================= */
+/* ================================================= 📱 TABLET (768px and up) ================================================= */
 @media (min-width: 768px) {
   body {
     padding: 0;
@@ -215,14 +137,16 @@ h3 {
     font-size: 13px;
   }
 
+  .order-row {
+    font-size: 15px;
+  }
+
   .pay-btn {
     font-size: 16px;
   }
 }
 
-/* =================================================
-   💻 DESKTOP (1024px and up)
-================================================= */
+/* ================================================= 💻 DESKTOP (1024px and up) ================================================= */
 @media (min-width: 1024px) {
   .payment-wrapper {
     max-width: 520px;
@@ -233,8 +157,11 @@ h3 {
     font-size: 22px;
   }
 
-  .order-box,
-  .payment-method {
-    font-size: 15px;
+  .order-row {
+    font-size: 16px;
+  }
+
+  .pay-btn {
+    font-size: 17px;
   }
 }
